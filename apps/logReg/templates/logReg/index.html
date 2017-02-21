@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="">
+    <title>Log index</title>
+</head>
+<body>
+<h1>Registration</h1>
+
+<form action="/process" method="post">
+    {% csrf_token %}
+    <input type="text" name="first" placeholder="First Name">
+    <input type="text" name="last" placeholder="Last Name">
+    <input type="text" name="email" placeholder="Email">
+    <input type="password" name="password" placeholder="Password">
+    <input type="password" name="confirm" placeholder="Confirm Password">
+    <input type="submit" value="Register">
+</form>
+<h2>Log In</h2>
+<form action="/log_in" method="post">
+    {% csrf_token %}
+    <input type="text" name="elog" placeholder="Email">
+    <input type="password" name="plog" placeholder="Password">
+    <input type="submit" value="Log In">
+</form>
+</body>
+</html>
